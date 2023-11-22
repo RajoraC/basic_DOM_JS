@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>DoM First</title>
+    <button onclick="My()">Click Me</button>
+    <p id="demo"></p>
+</head>
+<body>
+    <div class="p1">DOM First</div>
+    <h class="heading"></h>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <!-- <script>
+        function My()
+        {
+            alert("I am alert box")
+        }
+        // window.alert("this is another box")
+    </script> -->
+    <script>
+        function My()
+        {
+            var txt;
+            if(confirm("press the button in your choice"))
+            {
+                txt = "Yuo press ok";
+            }
+            else
+            {
+                txt = "you press cancel";
+            }
+            document.getElementById("demo").innerHTML = txt;
+        }
+    </script>
+</body>
+</html>
