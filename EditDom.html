@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EDIT</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+<script>
+    function add(langName)
+    {
+        const li = document.createElement('li')
+
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    add("JAVA")
+    add("RUBY")
+
+    function addOpti(langName)
+    {
+        const li = document.createElement('li')
+
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOpti("PYTHON")
+
+    //EDIT
+    const secLang = document.querySelector("li:nth-child(2)")
+    console.log(secLang)
+    // secLang.innerHTML = "REMOVE"
+
+    const newLang  = document.createElement('li')
+    newLang.textContent = "REPALCE22"
+    secLang.replaceWith(newLang)
+</script>
+</html>
